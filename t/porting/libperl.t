@@ -251,7 +251,7 @@ sub nm_parse_darwin {
         $symbols->{o} = $1;
         return;
     } else {
-        if ($^V < v5.39 && !defined $symbols->{o}) {
+        if ($^V < v5.39.1 && !defined $symbols->{o}) {
             skip_all "nm parser requires an update on Darwin";
         }
 
